@@ -7,6 +7,7 @@ export interface Config {
   testComputed: Computed<'one' | 'two'>
   testComputedUnionConst: Computed<'one' | 'two'>
   testComputedRadio: Computed<'one' | 'two'>
+  testComputedUnionConstRadio: Computed<'one' | 'two'>
 }
 
 export const Config: Schema<Config> = Schema.object({
