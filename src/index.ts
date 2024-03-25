@@ -13,7 +13,12 @@ export const Config: Schema<Config> = Schema.object({
   testNormal: Schema.union(['one', 'two']).default('one'),
   testComputed: Schema.computed(Schema.union(['one', 'two'])).default('one'),
   testComputedUnionConst: Schema.computed(Schema.union([Schema.const('one'), Schema.const('two')])).default('one'),
-  testComputedRadio: Schema.computed(Schema.union(['one', 'two'])).role('radio').default('one'),
+  testComputedRadio: Schema.computed(Schema.union(['one', 'two']))
+    .role('radio')
+    .default('one'),
+  testComputedUnionConstRadio: Schema.computed(Schema.union([Schema.const('one'), Schema.const('two')]))
+    .role('radio')
+    .default('one'),
 })
 
 export function apply(ctx: Context) {
